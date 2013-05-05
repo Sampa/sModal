@@ -85,7 +85,7 @@ span.bClose:hover{
 #sTaskbarWrapper{
 	position:fixed; 
 
-	top:50px;
+	bottom:0px;
 	left:00px;
 	background:#0088CC;
 	padding: 3px;
@@ -114,6 +114,7 @@ span.bClose:hover{
 
 #sTaskbar LI UL { 
 	position: absolute;
+	top:-20px;
 	border-top: 0px solid transparent;
 	border-bottom: 0px solid transparent;
 	width:300px;
