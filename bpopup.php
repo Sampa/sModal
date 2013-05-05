@@ -93,27 +93,17 @@ class Bpopup extends CWidget
 			
 		</div>
 
-
-	
-
-			<!--<li class="subDropSet">
-
-				<a href="#"  class="base"><i class="icon-wrench"></i></a>
-					<ul style="display: none;" class="">
-						<li class=""><a href="#">Close all</a></li>
-					</ul>		
-			</li>-->
 	<?php if($this->taskbar):?>
 	<!-- Optional taskbar -->
 	<div id="sTaskbarWrapper">
 		<ul id="sTaskbar" class=" breadcrumb nav">
 			<li id="sTaskbarStart" >
-			<a href="#" class="subToggle"><i class="icon-wrench"></i></a>
 			 	<ul class="btn-group">
 					<li><button id="sTaskbarCloseAll" class="<?= $this->commonClass;?>" href="#">Close all</button></li>	
 					<li><button id="sTaskbarFold" class="<?= $this->commonClass;?>" href="#">Hide</button></li>		
 					<li><button id="sTaskbarUnfold" class="<?= $this->commonClass;?>" href="#">Show</button></li>					 	 				 	 		 	 				 	 
 				</ul>	 
+				<a href="#" class="subToggle"><i class="icon-wrench"></i></a>
 			</li> 
 		</ul>		
 		
@@ -122,7 +112,7 @@ class Bpopup extends CWidget
 	<!-- Taskbar li template (uses .sTaskBarItem for styles) --> 
 	<ul style="display:none;">
 	<li class="sTaskbarTemplate dropdown">
-				<a href="#" style="float:left;"></a><i class="subToggle icon-chevron-down" style="cursor:pointer;"></i>
+				<a href="#" style="float:left;"></a><i class="subToggle icon-chevron-up" style="cursor:pointer;"></i>
 				<ul>
 				    <?php
 	            	foreach($this->buttons as $key=>$value){
@@ -192,10 +182,11 @@ class Bpopup extends CWidget
 
 		    ",CClientScript::POS_HEAD
 			);		
-			$cs->registerScriptFile($baseUrl.'/jquery.bpopup.min.js', CClientScript::POS_HEAD);
+		//	$cs->registerScriptFile($baseUrl.'/bpopup.js', CClientScript::POS_HEAD);
 			$cs->registerScriptFile($baseUrl.'/jquery.easing.min.js', CClientScript::POS_HEAD);
-			$cs->registerScriptFile($baseUrl.'/extended.js', CClientScript::POS_HEAD);
-			$cs->registerCssFile($baseUrl.'/bpopup.css');
+		//	$cs->registerScriptFile($baseUrl.'/extended.js', CClientScript::POS_HEAD);
+		//	$cs->registerCssFile($baseUrl.'/bpopup.css');
+
 			$cs->registerCssFile($baseUrl.'/style.css');
 			$cs->registerScriptFile($baseUrl.'/jquery.isloading.min.js', CClientScript::POS_END);
 
